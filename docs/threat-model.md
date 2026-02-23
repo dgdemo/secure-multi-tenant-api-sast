@@ -51,8 +51,13 @@
 
 ### T2: Excessive error detail (information disclosure)
 - What could go wrong:
+    - The API returns stack traces or detailed exception messages to clients, exposing internal implementation details.
 - Impact:
+    - Information disclosure that could assist attackers in crafting targeted exploits or understanding system internals.
 - Mitigations:
+    - Standardize error responses with generic client-safe messages.
+    - Log detailed errors server-side only.
+    - Disable debug modes in production configurations.
 
 ## Security requirements (v1)
 - 
