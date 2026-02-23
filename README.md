@@ -63,4 +63,4 @@ security that enables product teams while preventing regression.
 
 ## Status
 
-Threat model (v1) complete. Service implementation and SAST ingegration in progress.
+Threat model (v1) complete. Service implementation and SAST integration in progress.
