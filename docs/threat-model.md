@@ -39,10 +39,15 @@
 - Error handling:
 
 ## Threats (prioritized)
-### T1: BOLA / IDOR (cross-tenant data access)
+### T1: Broken Object Level Authorization (BOLA) / Insecure Direct Object Reference (IDOR) - (cross-tenant data access)
 - What could go wrong:
+    - An authenticated user accesses a project belonging to another tenant by supplying a valid projectId that is not scoped to their tenantId.
 - Impact:
+    - Cross-tenant data exposure, loss of confidentiality, potential compliance violations.
 - Mitigations:
+    - Enforce tenant scoping in all object lookups
+    - Use (**projectId** AND **tenantId**) in data access patterns
+    - Add automated SAST checks to detect unsafe lookup patterns
 
 ### T2: Excessive error detail (information disclosure)
 - What could go wrong:
