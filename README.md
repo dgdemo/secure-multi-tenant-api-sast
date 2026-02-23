@@ -6,8 +6,8 @@ A backend API reference project demonstrating how to prevent and automatically d
 
 This repository simulates a realistic backend service used by multiple customer organizations (“tenants”) sharing a single API and datastore. It demonstrates how an embedded Application Security engineer can:
 
-- Identify critical API security risks
-- Guide secure implementation patterns
+- Identify and prioritze critical API security risks
+- Guide secure backend implementation patterns
 - Integrate SAST into CI/CD workflows
 - Reduce regressions through automation
 
@@ -46,7 +46,8 @@ Demonstrates excessive error detail exposure and improper production-safe error 
 
 ## Philosophy
 
-This project is not a vulnerability playground.
+This project is not a vulnerability playground, it is meant to model how security
+integrates into a product engineering workflow.
 
 It models:
 
@@ -62,4 +63,4 @@ security that enables product teams while preventing regression.
 
 ## Status
 
-Initial scaffold. Implementation in progress.
+Threat model (v1) complete. Service implementation and SAST ingegration in progress.
