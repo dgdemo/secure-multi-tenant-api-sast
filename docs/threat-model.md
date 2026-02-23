@@ -60,7 +60,10 @@
     - Disable debug modes in production configurations.
 
 ## Security requirements (v1)
-- 
+- All object access must be tenant-scoped
+- No stack traces or internal errors returned to clients.
+- SAST must run on every pull request.
+- Vulnerable patterns must fail CI once gating is enabled
 
 ## Open questions / follow-ups
 -
